@@ -1,2 +1,3 @@
 # HeartAid
-A Website that Uses Machine Learning to Predict Heart Attack
+A website that uses machine learning to predict heart attack
+
