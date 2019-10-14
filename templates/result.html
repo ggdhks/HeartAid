@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>PredictAid | Result</title>
+
+    <link rel="stylesheet" href="{{ static_url('bootstrap/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i">
+    <link rel="stylesheet" href="{{ static_url('fonts/fontawesome-all.min.css') }}">
+    <link rel="stylesheet" href="{{ static_url('fonts/font-awesome.min.css') }}">
+    <link rel="stylesheet" href="{{ static_url('fonts/material-icons.min.css') }}">
+    <link rel="stylesheet" href="{{ static_url('fonts/fontawesome5-overrides.min.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
+    <link rel="stylesheet" href="{{ static_url('css/styles.min.css') }}">
+</head>
+
+<body>
+    <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar">
+        <div class="container"><button class="navbar-toggler" data-toggle="collapse"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-dark clean-navbar" style="font-size: 12px;">
+                <div class="container"><a class="navbar-brand logo" id="heart-aid-logo" href="/main"><strong>&nbsp;</strong><i class="fas fa-heartbeat" id="beat-heart-red"></i><strong>&nbsp;HeartAid.</strong>&nbsp;</a><button data-toggle="collapse" class="navbar-toggler"
+                        data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse" id="navcol-1">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item item" role="presentation"><a class="nav-link text-nowrap text-left active" href="/heart">Heart Disease</a></li>
+                            <li class="nav-item item" role="presentation"><a class="nav-link" href="/data">Data Analysis</a></li>
+                            <li class="nav-item item" role="presentation"><a class="nav-link" href="/model">Model Building<br></a></li>
+                            <li class="nav-item" role="presentation"><a class="nav-link" href="/predict" style="color: rgb(59,153,225);">Predict</a></li>
+                            <li class="nav-item" role="presentation"><a class="btn btn-primary" role="button" href="/login" style="font-size: 12px;"><strong>Log out</strong></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </nav>
+    <main class="page payment-page">
+        <section class="clean-block payment-form dark">
+            <div class="container">
+                <div class="block-heading">
+                    <h2 class="text-info"><strong>Result</strong></h2>
+                    <p style="color: rgb(205,92,92);"><strong>You may have a risk of heart disease.</strong></p>
+                </div>
+                <form>
+                    <div class="products" style="margin-bottom: 0px;padding-bottom: 0px;">
+                        <h3 class="title">1. Basic Information</h3>
+                        <div class="form-row">
+                            <div class="col">
+                                <div class="item">
+                                    <p class="item-name">Name</p>
+                                    <p class="item-description"><strong>{{nickname_r}}</strong></p>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="item">
+                                    <p class="item-name">Age</p>
+                                    <p class="item-description"><strong>{{age_r}}</strong></p>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="item">
+                                    <p class="item-name">Sex</p>
+                                    <p class="item-description"><strong>{{sex_r}}</strong></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="products" style="padding-top: 10px;padding-bottom: 0px;">
+                        <h3 class="title">2. Heart Fact</h3>
+                        <div class="form-row">
+                            <div class="col">
+                                <div class="item">
+                                    <p class="item-name"><strong>Chest Pain Type</strong></p>
+                                    <p class="item-description"><strong>{{chest_r}}</strong></p>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="item">
+                                    <p class="item-name"><strong>Resting Blood Pressure</strong></p>
+                                    <p class="item-description"><strong>{{rest_r}} mm Hg</strong><br></p>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col">
+                                <div class="item">
+                                    <p class="item-name"><strong>Serum Cholestoral</strong></p>
+                                    <p class="item-description"><strong>{{serum_r}} mg/dl</strong></p>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="item">
+                                    <p class="item-name"><strong>Fasting Blood Sugar&nbsp; (&gt;120mg/dl )</strong><br></p>
+                                    <p class="item-description"><strong> {{fast_r}}</strong></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col">
+                                <div class="item">
+                                    <p class="item-name"><strong>Resting Electrocardiographic</strong><br></p>
+                                    <p class="item-description"><strong>{{resting_r}}</strong></p>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="item">
+                                    <p class="item-name"><strong>Maximum Heart Rate</strong><br></p>
+                                    <p class="item-description"><strong>{{maxi_r}}</strong></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col">
+                                <div class="item">
+                                    <p class="item-name"><strong>Exercise Induced Angina</strong><br></p>
+                                    <p class="item-description"><strong>{{exercise_r}}</strong></p>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="item">
+                                    <p class="item-name"><strong>Oldpeak</strong><br></p>
+                                    <p class="item-description"><strong>{{old_r}}</strong></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col">
+                                <div class="item">
+                                    <p class="item-name"><strong>Slope</strong><br></p>
+                                    <p class="item-description"><strong>{{slope_r}}</strong></p>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="item">
+                                    <p class="item-name"><strong>Ca</strong><br></p>
+                                    <p class="item-description"><strong>{{ca_r}}</strong></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col">
+                                <div class="item">
+                                    <p class="item-name"><strong>Thal</strong><br></p>
+                                    <p class="item-description"><strong>{{thal_r}}</strong></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="products" style="padding-top: 10px;padding-bottom: 0px;">
+                        <h3 class="title">3. Result Analysis</h3>
+                        <div class="item">
+                            <p class="item-name">Risk</p>
+                            <p class="item-description" style="color: rgb(205,92,92);opacity: 1;"><strong>{{risk_r}}</strong><br></p>
+                        </div>
+                        <div class="item">
+                            <p class="item-name">Advice</p>
+                            <p class="item-description">{{advice_r}}</p>
+                            <div class="card-details" style="padding-top: 10px;padding-bottom: 20px;margin-right: 10px;">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer class="page-footer dark">
+        <div class="footer-copyright">
+            <p>Copyright © 2019 Keshan He</p>
+        </div>
+    </footer>
+    <script src="{{ static_url('js/jquery.min.js') }}"></script>
+    <script src="{{ static_url('bootstrap/js/bootstrap.min.js') }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js"></script>
+    <script src="{{ static_url('js/script.min.js') }}"></script>
+</body>
+
+</html>

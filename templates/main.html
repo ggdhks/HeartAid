@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>HeartAid | Main</title>
+
+    <link rel="stylesheet" href="{{ static_url('bootstrap/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i">
+    <link rel="stylesheet" href="{{ static_url('fonts/fontawesome-all.min.css') }}">
+    <link rel="stylesheet" href="{{ static_url('fonts/font-awesome.min.css') }}">
+    <link rel="stylesheet" href="{{ static_url('fonts/material-icons.min.css') }}">
+    <link rel="stylesheet" href="{{ static_url('fonts/fontawesome5-overrides.min.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
+    <link rel="stylesheet" href="{{ static_url('css/styles.min.css') }}">
+</head>
+
+<body>
+    <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar">
+        <div class="container"><button class="navbar-toggler" data-toggle="collapse"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-dark clean-navbar" style="font-size: 12px;">
+                <div class="container"><a class="navbar-brand logo" id="heart-aid-logo" href="/main"><strong>&nbsp;</strong><i class="fas fa-heartbeat" id="beat-heart-red"></i><strong>&nbsp;HeartAid.</strong>&nbsp;</a><button data-toggle="collapse" class="navbar-toggler"
+                        data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse" id="navcol-1">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item item" role="presentation"><a class="nav-link text-nowrap text-left active" href="/heart">Heart Disease</a></li>
+                            <li class="nav-item item" role="presentation"><a class="nav-link" href="/data">Data Analysis</a></li>
+                            <li class="nav-item item" role="presentation"><a class="nav-link" href="/model">Model Building<br></a></li>
+                            <li class="nav-item" role="presentation"><a class="nav-link" href="/predict" style="color: rgb(59,153,225);">Predict</a></li>
+                            <li class="nav-item" role="presentation"><a class="btn btn-primary" role="button" href="/login" style="font-size: 12px;"><strong>Log out</strong></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </nav>
+    <main class="page service-page">
+        <section class="clean-block clean-services dark">
+            <div class="container">
+                <div class="text-nowrap block-heading" style="height: 188px;">
+                    <h1 class="text-info" style="color: rgb(0,123,255);">Welcome to<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<i class="fa fa-heartbeat" id="fa-fa-heartbeat2"></i>&nbsp;<strong>HeartAid.</strong></h1>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card"><img class="rounded card-img-top w-100 d-block" data-aos="fade" src="static/img/heart/1.png">
+                            <div class="card-body">
+                                <h4 class="card-title">Heart Disease</h4>
+                                <p class="card-text">Heart disease&nbsp;is the No. 1 cause of death in the world and the leading cause of death in the United States.<br></p>
+                            </div>
+                            <div style="padding: 0;height: 60px;"><a class="btn btn-outline-primary btn-sm" role="button" href="/heart">Learn More</a></div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card"><img class="card-img-top w-100 d-block" data-aos="fade" src="static/img/heart/2.png">
+                            <div class="card-body">
+                                <h4 class="card-title">Data Analysis</h4>
+                                <p class="card-text">Clinical data is available from the UCI Machine Learning Repository.<br>There are 14 attributes in the data source.<br></p>
+                            </div>
+                            <div style="height: 60px;"><a class="btn btn-outline-primary btn-sm" role="button" href="/data" style="height: 31px;">Learn More</a></div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card"><img class="card-img-top w-100 d-block" data-aos="fade" src="static/img/heart/3.jpg">
+                            <div class="card-body">
+                                <h4 class="card-title">Model Building</h4>
+                                <p class="card-text">It combines Machine Learning techniques with Tornado framework for an online application.<br></p>
+                            </div>
+                            <div style="height: 60px;"><a class="btn btn-outline-primary btn-sm" role="button" href="/model">Learn More</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="clean-block add-on call-to-action">
+                <h3>For your health!</h3><a class="btn btn-primary" role="button" href="/predict"><strong>Predict Now</strong></a></div>
+        </section>
+    </main>
+    <footer class="page-footer dark">
+        <div class="footer-copyright">
+            <p>Copyright © 2019 Keshan He</p>
+        </div>
+    </footer>
+    <script src="{{ static_url('js/jquery.min.js') }}"></script>
+    <script src="{{ static_url('bootstrap/js/bootstrap.min.js') }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js') }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js"></script>
+    <script src="{{ static_url('js/script.min.js') }}"></script>
+</body>
+
+</html>

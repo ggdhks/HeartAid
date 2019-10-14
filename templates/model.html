@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>HeartAid | Model Building</title>
+    
+    <link rel="stylesheet" href="{{ static_url('bootstrap/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i">
+    <link rel="stylesheet" href="{{ static_url('fonts/fontawesome-all.min.css') }}">
+    <link rel="stylesheet" href="{{ static_url('fonts/font-awesome.min.css') }}">
+    <link rel="stylesheet" href="{{ static_url('fonts/material-icons.min.css') }}">
+    <link rel="stylesheet" href="{{ static_url('fonts/fontawesome5-overrides.min.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
+    <link rel="stylesheet" href="{{ static_url('css/styles.min.css') }}">
+</head>
+
+<body>
+    <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar">
+        <div class="container"><button class="navbar-toggler" data-toggle="collapse"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-dark clean-navbar" style="font-size: 12px;">
+                <div class="container"><a class="navbar-brand logo" id="heart-aid-logo" href="/main"><strong>&nbsp;</strong><i class="fas fa-heartbeat" id="beat-heart-red"></i><strong>&nbsp;HeartAid.</strong>&nbsp;</a><button data-toggle="collapse" class="navbar-toggler"
+                        data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse" id="navcol-1">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item item" role="presentation"><a class="nav-link text-nowrap text-left active" href="/heart">Heart Disease</a></li>
+                            <li class="nav-item item" role="presentation"><a class="nav-link" href="/data">Data Analysis</a></li>
+                            <li class="nav-item item" role="presentation"><a class="nav-link" href="/model">Model Building<br></a></li>
+                            <li class="nav-item" role="presentation"><a class="nav-link" href="/predict" style="color: rgb(59,153,225);">Predict</a></li>
+                            <li class="nav-item" role="presentation"><a class="btn btn-primary" role="button" href="/login" style="font-size: 12px;"><strong>Log out</strong></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </nav>
+    <main class="page blog-post">
+        <section class="clean-block clean-post dark">
+            <div class="container">
+                <div class="block-heading" style="margin-top: -100px;">
+                    <h2 class="text-info"><strong>Model Building</strong></h2>
+                    <p>After comparing eight machine learning algorithms, the site decided to use this algorithm to predict.<br></p>
+                </div>
+                <div class="block-content">
+                    <div class="post-body">
+                        <h3 style="margin-top: 0xwpx;padding-top: 0;">Random Forest</h3>
+                        <p>Based on machine learning algorithms, the system can efficiently diagnose the presence of heart problems and allow users to get results in real-time.&nbsp;For Ramdom Forest, its&nbsp;accuracy&nbsp;is 80.328%.&nbsp;<br></p>
+                        <figure
+                            class="figure"><img class="rounded img-fluid figure-img" src="static/img/heart/7rf.png" alt="A generic square placeholder image with rounded corners in a figure.">
+                            <figcaption class="figure-caption"></figcaption>
+                            </figure>
+                            <h4>Background</h4>
+                            <p class="text-justify" style="margin-bottom: 0px;">Random Forests is a supervised learning model that are primarily used for classification and regression. It is randomly built and consists of many decision trees and is integrated to get accurate results. Unlike decision tree,
+                                random forest segmentation features and the process of finding root nodes are random. In a random forest, there is no connection between each decision tree. Because each decision tree exists alone, the predicted results
+                                are often inaccurate, so after they are brought together, the overall prediction function will strengthen.<br></p>
+                            <h4 style="margin-bottom: 0px;">Reality Difficulty</h4>
+                            <p class="text-justify">Real-world applications are indeed more complex, and the differences between different classification errors can be quite large. For example, in medical diagnosis, cancer is regarded as a positive category, and health is regarded
+                                as&nbsp;a negative category. Then predicting a sick patient healthy as a false negtive is more serious than predicting a patient who is not ill as a false positive.<br></p>
+                            <div class="row">
+                                <div class="col">
+                                    <p class="text-justify"><strong>Confusion Matrix&nbsp;</strong><br><br>It is a table used to describe the performance of the classifier, with four variables. TP(True Positive) is predicted yes and actual yes. FN(False Negative) is predicted
+                                        no and actual yes, and also called ”Type II error”.&nbsp;<br><br>Among them, yes is a disease, no is no disease. As shown in the Figure, it needs to make FN as small as possible; that is, the Type II error is small.
+                                        Then, KNN and SVM should not be the most appropriate classifier because the possibility of missed diagnosis is big. Combined with the accuracy, Random Forest is a suitable classifier.<br></p>
+                                </div>
+                                <div class="col-md-6">
+                                    <figure class="figure"><img class="rounded img-fluid figure-img" src="static/img/heart/cm.png" alt="A generic square placeholder image with rounded corners in a figure.">
+                                        <figcaption class="figure-caption text-center">Confusion Matrix</figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <figure class="figure"><img class="rounded img-fluid figure-img" src="static/img/heart/roc.png" alt="A generic square placeholder image with rounded corners in a figure.">
+                                        <figcaption class="figure-caption text-center">ROC Curve</figcaption>
+                                    </figure>
+                                </div>
+                                <div class="col-md-6">
+                                    <p class="text-justify"><br><strong>ROC Curve</strong><br><br>The ROC curve is a plot of the TPR(True Positive Rate) for the y-axis, and the FPR(False Positive Rate) for the x-axis according to different thresholds. <br><br>Generally, the
+                                        default threshold is 0.5. If the probability is greater than 0.5, then the sample is divided into positive sample by the model, and vice versa.<br><br>AUC is the area under curve, the larger the value of AUC, the
+                                        better. As shown in the Figure, AUC is 0.896. When its value is greater than 0.80, it is a excellent discrimination.<br></p>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="page-footer dark">
+        <div class="footer-copyright">
+            <p>Copyright © 2019 Keshan He</p>
+        </div>
+    </footer>
+    <div class="block-heading"></div>
+    <script src="{{ static_url('js/jquery.min.js') }}"></script>
+    <script src="{{ static_url('bootstrap/js/bootstrap.min.js') }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js"></script>
+    <script src="{{ static_url('js/script.min.js') }}"></script>
+</body>
+
+</html>

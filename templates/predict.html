@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>HeartAid | Predict</title>
+    
+    <link rel="stylesheet" href="{{ static_url('bootstrap/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i">
+    <link rel="stylesheet" href="{{ static_url('fonts/fontawesome-all.min.css') }}">
+    <link rel="stylesheet" href="{{ static_url('fonts/font-awesome.min.css') }}">
+    <link rel="stylesheet" href="{{ static_url('fonts/material-icons.min.css') }}">
+    <link rel="stylesheet" href="{{ static_url('fonts/fontawesome5-overrides.min.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
+    <link rel="stylesheet" href="{{ static_url('css/styles.min.css') }}">
+</head>
+
+<body>
+    <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar">
+        <div class="container"><button class="navbar-toggler" data-toggle="collapse"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-dark clean-navbar" style="font-size: 12px;">
+                <div class="container"><a class="navbar-brand logo" id="heart-aid-logo" href="/main"><strong>&nbsp;</strong><i class="fas fa-heartbeat" id="beat-heart-red"></i><strong>&nbsp;HeartAid.</strong>&nbsp;</a><button data-toggle="collapse" class="navbar-toggler"
+                        data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse" id="navcol-1">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item item" role="presentation"><a class="nav-link text-nowrap text-left active" href="/heart">Heart Disease</a></li>
+                            <li class="nav-item item" role="presentation"><a class="nav-link" href="/data">Data Analysis</a></li>
+                            <li class="nav-item item" role="presentation"><a class="nav-link" href="/model">Model Building<br></a></li>
+                            <li class="nav-item" role="presentation"><a class="nav-link" href="/predict" style="color: rgb(59,153,225);">Predict</a></li>
+                            <li class="nav-item" role="presentation"><a class="btn btn-primary" role="button" href="/login" style="font-size: 12px;"><strong>Log out</strong></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </nav>
+    <main class="page registration-page">
+        <section class="clean-block clean-form dark">
+            <div class="container-fluid">
+                <div class="block-heading">
+                    <h2 class="text-info"><strong>Predict</strong></h2>
+                    <p>Fill the form to receive a prediction <br>based on the model<br></p>
+                </div>
+                <form method="post" action="/result">
+                    <div class="products" style="margin-bottom: 20px;">
+                        <h3 class="title" style="font-size: 16px;">
+                            <strong>Age</strong>
+                        </h3>
+                        <input class="form-control" type="number" placeholder="age in years" name="r_age">
+                    </div>
+
+                    <div class="products" style="margin-bottom: 20px;">
+                        <h3 class="title" style="font-size: 16px;">
+                            <strong>Sex</strong>
+                        </h3>
+                        <select class="form-control" name="r_sex">
+                            <optgroup label="Please select one">
+                                <option value="Male" selected="selected" >Male</option>
+                                <option value="Female" >Female</option>
+                            </optgroup>
+                        </select>
+                    </div>
+
+                    <div class="products" style="margin-bottom: 20px;">
+                        <h3 class="title" style="font-size: 16px;"><strong>Chest Pain Type</strong></h3>
+                        <select class="form-control" name="r_chest">
+                            <optgroup label="Please select one">
+                                <option value="Typical Angina" selected="">Typical Angina</option>
+                                <option value="Atypical Angina">Atypical Angina</option>
+                                <option value="Non-anginal Pain">Non-anginal Pain</option>
+                                <option value="None" selected="">None</option>
+                            </optgroup>
+                        </select>
+                    </div>
+
+                    <div
+                        class="products" style="margin-bottom: 20px;">
+                        <h3 class="title" style="font-size: 16px;"><strong>Resting Blood Pressure</strong></h3>
+                        <input class="form-control" type="number" placeholder="in mm Hg on admission to the hospital" name="r_rest">
+                    </div>
+
+                    <div class="products" style="margin-bottom: 20px;">
+                        <h3 class="title" style="font-size: 16px;">
+                            <strong>Serum Cholestoral</strong>
+                        </h3>
+                        <input class="form-control" type="number" placeholder="in mg/dl" name="r_serum">
+                    </div>
+
+                    <div class="products" style="margin-bottom: 20px;">
+                        <h3 class="title" style="font-size: 16px;">
+                            <strong>Fasting Blood Sugar&nbsp;</strong><br>
+                        </h3>
+                        <select class="form-control" name="r_fast">
+                            <optgroup label="> 120 mg/dl (1 = true; 0 = false)">
+                                <option value="1">1</option>
+                                <option value="0" selected="">0</option>
+                            </optgroup>
+                        </select>
+                    </div>
+
+                    <div class="products" style="margin-bottom: 20px;">
+                        <h3 class="title" style="font-size: 16px;">
+                            <strong>Resting Electrocardiographic</strong><br>
+                        </h3>
+                        <select class="form-control" name="r_resting">
+                            <optgroup label="Please select one">
+                                <option value="0" selected="">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                            </optgroup>
+                        </select>
+                    </div>
+
+            <div class="products" style="margin-bottom: 20px;">
+                <h3 class="title" style="font-size: 16px;">
+                    <strong>Maximum Heart Rate</strong><br>
+                </h3>
+                <input class="form-control" type="number" name="r_maxi">
+            </div>
+                <div class="products" style="margin-bottom: 20px;">
+                    <h3 class="title" style="font-size: 16px;">
+                        <strong>Exercise Induced Angina</strong><br>
+                    </h3>
+                    <select class="form-control" name = "r_exercise">
+                        <optgroup label="(1 = yes; 0 = no)">
+                        <option value="1">1</option>
+                        <option value="0" selected="">0</option>
+                        </optgroup>
+                    </select>
+                </div>
+
+                <div class="products" style="margin-bottom: 20px;">
+                    <h3 class="title" style="font-size: 16px;">
+                        <strong>Oldpeak</strong><br>
+                    </h3>
+                        <input class="form-control" type="text" placeholder="ST depression induced by exercise relative to rest" name="r_old">
+                </div>
+
+                <div class="products" style="margin-bottom: 20px;">
+                    <h3 class="title" style="font-size: 16px;">
+                        <strong>Slope</strong><br>
+                    </h3>
+                    <select class="form-control" name = "r_slope">
+                        <optgroup label="Please select one">
+                            <option value="0" selected="">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                        </optgroup>
+                    </select>
+                </div>
+
+                <div class="products" style="margin-bottom: 20px;">
+                    <h3 class="title" style="font-size: 16px;">
+                        <strong>Ca</strong><br>
+                    </h3>
+                    <input class="form-control" type="number" placeholder="number of major vessels (0-3) colored by flourosopy" name = "r_ca">
+                </div>
+                <div class="products" style="margin-bottom: 20px;">
+                    <h3 class="title" style="font-size: 16px;">
+                        <strong>Thal</strong><br></h3>
+                        <select class="form-control" name = "r_thal">
+                            <optgroup label="3 = normal; 6 = fixed defect; 7 = reversable defect">
+                                <option value="0" selected="">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                <div class="card-details">
+                    <div class="form-row">
+                        <div class="col-sm-12">
+
+                            <div class="form-group">
+                                
+                                <input type="submit" class="btn btn-primary btn-block" value="Predict">
+                                   
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    </form>
+                    </div>
+        </section>
+    </main>
+    <footer class="page-footer dark">
+        <div class="footer-copyright">
+            <p>Copyright © 2019 Keshan He</p>
+        </div>
+    </footer>
+    <script src="{{ static_url('js/jquery.min.js') }}"></script>
+    <script src="{{ static_url('bootstrap/js/bootstrap.min.js') }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js"></script>
+    <script src="{{ static_url('js/script.min.js') }}"></script>
+
+
+
+</body>
+
+</html>

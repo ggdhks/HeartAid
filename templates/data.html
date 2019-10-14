@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>HeartAid | Data Analysis</title>
+
+    <link rel="stylesheet" href="{{ static_url('bootstrap/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i">
+    <link rel="stylesheet" href="{{ static_url('fonts/fontawesome-all.min.css') }}">
+    <link rel="stylesheet" href="{{ static_url('fonts/font-awesome.min.css') }}">
+    <link rel="stylesheet" href="{{ static_url('fonts/material-icons.min.css') }}">
+    <link rel="stylesheet" href="{{ static_url('fonts/fontawesome5-overrides.min.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
+    <link rel="stylesheet" href="{{ static_url('css/styles.min.css') }}">
+</head>
+
+<body>
+    <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar">
+        <div class="container"><button class="navbar-toggler" data-toggle="collapse"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-dark clean-navbar" style="font-size: 12px;">
+                <div class="container"><a class="navbar-brand logo" id="heart-aid-logo" href="/main"><strong>&nbsp;</strong><i class="fas fa-heartbeat" id="beat-heart-red"></i><strong>&nbsp;HeartAid.</strong>&nbsp;</a><button data-toggle="collapse" class="navbar-toggler"
+                        data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse" id="navcol-1">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item item" role="presentation"><a class="nav-link text-nowrap text-left" a href="/heart">Heart Disease</a></li>
+                            <li class="nav-item item" role="presentation"><a class="nav-link active" a href="/data">Data Analysis</a></li>    
+                            <li class="nav-item item" role="presentation"><a class="nav-link" a href="/model">Model Building<br></a></li>
+                            <li class="nav-item" role="presentation"><a class="nav-link" href="/predict" style="color: rgb(59,153,225);">Predict</a></li>
+                            <li class="nav-item" role="presentation"><a class="btn btn-primary" role="button" href="/login" style="font-size: 12px;"><strong>Log out</strong></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </nav>
+    <main class="page blog-post-list">
+        <section class="clean-block clean-blog-list dark">
+            <div class="container">
+                <div class="block-heading">
+                    <h2 class="text-info"><strong>Data Analysis</strong></h2>
+                    <p>Data analysis aims to manipulate, clean, and process data in Python. <br></p>
+                </div>
+                <div class="block-content">
+                    <div class="clean-blog-post">
+                        <div class="row">
+                            <div class="col-lg-5"><img class="rounded img-fluid" src="static/img/heart/logo.gif"></div>
+                            <div class="col-lg-7">
+                                <h3>Dataset Source <br></h3>
+                                <div class="info">
+                                    <div>
+                                        <div class="row">
+                                            <div class="col-xl-10 offset-xl-0">
+                                                <p class="text-justify">The dataset source is from the UCI Machine Learning Repository. It has 303 records, of which 139 has heart disease, and the rate of illness is 45.87%.<br></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><a class="btn btn-outline-primary btn-sm" role="button" href="https://archive.ics.uci.edu/ml/datasets/Heart+Disease">Read More</a></div>
+                        </div>
+                    </div>
+                    <div class="clean-blog-post">
+                        <div class="row">
+                            <div class="col-lg-5"><img class="rounded img-fluid" src="static/img/heart/4.png"></div>
+                            <div class="col-lg-7">
+                                <h3>Missing Value</h3>
+                                <div class="info">
+                                    <div>
+                                        <div class="row">
+                                            <div class="col-xl-10 offset-xl-0">
+                                                <p class="text-justify">The original data set has missing values and redundant attributes. &nbsp;The data source provided on Kaggle has solved this problem.<br><br>Among the 13 attributes, 6 attributes are numeric values and there
+                                                    are 7 categorical values. The main point is to encode the categorical value, so the method of one-hot coding is adopted.<br></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clean-blog-post">
+                        <div class="row">
+                            <div class="col-lg-5"><img class="rounded img-fluid" src="static/img/heart/2heapmap.png"></div>
+                            <div class="col-lg-7">
+                                <h3>Data Preprocessing</h3>
+                                <div class="info">
+                                    <div>
+                                        <div class="row">
+                                            <div class="col-xl-10 offset-xl-0">
+                                                <p class="text-justify">In the process of data analysis, data preparation is a particularly important task, including data loading, data cleaning, data normalization, data transformation, feature extraction and selection.<br><br>The
+                                                    dataset contains categorical and numeric features separately, with many columns. The correlation matrix can be visualized as a heat map in Figure, to detect correlations between columns. After computing
+                                                    the pairwise correlation<br>of them, excluding empty values.<br><br>It is evident that the relationship between the target value and other values is very high. Therefore, green is positively correlated
+                                                    and red is negatively correlated. The darker the color inside the grid, the higher the correlation magnitude.<br><br><br> <br></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="page-footer dark">
+        <div class="footer-copyright">
+            <p>Copyright © 2019 Keshan He</p>
+        </div>
+    </footer>
+    <script src="{{ static_url('js/jquery.min.js') }}"></script>
+    <script src="{{ static_url('bootstrap/js/bootstrap.min.js') }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js') }}"></script>
+    <script src="{{ static_url('js/script.min.js') }}"></script>
+</body>
+
+</html>

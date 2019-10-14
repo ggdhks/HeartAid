@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>HeartAid | Heart Disease</title>
+
+    <link rel="stylesheet" href="{{ static_url('bootstrap/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i">
+    <link rel="stylesheet" href="{{ static_url('fonts/fontawesome-all.min.css') }}">
+    <link rel="stylesheet" href="{{ static_url('fonts/font-awesome.min.css') }}">
+    <link rel="stylesheet" href="{{ static_url('fonts/material-icons.min.css') }}">
+    <link rel="stylesheet" href="{{ static_url('fonts/fontawesome5-overrides.min.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
+    <link rel="stylesheet" href="{{ static_url('css/styles.min.css') }}">
+</head>
+
+<body>
+    <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar">
+        <div class="container"><button class="navbar-toggler" data-toggle="collapse"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-dark clean-navbar" style="font-size: 12px;">
+                <div class="container"><a class="navbar-brand logo" id="heart-aid-logo" href="/main"><strong>&nbsp;</strong><i class="fas fa-heartbeat" id="beat-heart-red"></i><strong>&nbsp;HeartAid.</strong>&nbsp;</a><button data-toggle="collapse" class="navbar-toggler"
+                        data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse" id="navcol-1">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item item" role="presentation"><a class="nav-link text-nowrap text-left active" href="/heart">Heart Disease</a></li>
+                            <li class="nav-item item" role="presentation"><a class="nav-link" href="/data">Data Analysis</a></li>
+                            <li class="nav-item item" role="presentation"><a class="nav-link" href="/model">Model Building<br></a></li>
+                            <li class="nav-item" role="presentation"><a class="nav-link" href="/predict" style="color: rgb(59,153,225);">Predict</a></li>
+                            <li class="nav-item" role="presentation"><a class="btn btn-primary" role="button" href="/login" style="font-size: 12px;"><strong>Log out</strong></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </nav>
+    <main class="page">
+        <section class="clean-block features">
+            <div class="container">
+                <div class="block-heading">
+                    <h2 class="text-info"><strong>Heart Disease</strong></h2>
+                    <p>The growing demand for remote health care system can be used for health diagnosis and testing.&nbsp;</p>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-md-5 feature-box"><i class="far fa-hospital icon"></i>
+                        <h4>High Risk</h4>
+                        <p>Cardiovascular disease is the leading global cause of death, accounting for 17.3 million deaths per year.</p>
+                    </div>
+                    <div class="col-md-5 feature-box"><i class="fas fa-file-invoice-dollar icon"></i>
+                        <h4>High Cost</h4>
+                        <p>Direct and indirect costs of cardiovascular diseases and stroke total more than&nbsp;$320.1 billion.</p>
+                    </div>
+                    <div class="col-md-5 feature-box"><i class="material-icons icon">fitness_center</i>
+                        <h4>Less Exercise</h4>
+                        <p>In fact,&nbsp;lack&nbsp;of&nbsp;exercise&nbsp;is the single worst risk factor for&nbsp;heart disease&nbsp;for both men and women. Despite this, 70 per cent of adults don't do enough&nbsp;exercise.</p>
+                    </div>
+                    <div class="col-md-5 feature-box"><i class="fas fa-child icon"></i>
+                        <h4>Younger Age</h4>
+                        <p>About 20 percent, were 40 or younger.&nbsp;In addition, patients 40 and younger were just as likely to die after their heart attack as those ages 41 to 50.</p>
+                    </div>
+                    <div class="col-md-5 feature-box"><i class="fas fa-hand-holding-heart icon"></i>
+                        <h4>Easy to Ignore</h4>
+                        <p>The pain and discomfort caused by heart disease is very subtle, especially for women.</p>
+                    </div>
+                    <div class="col-md-5 feature-box"><i class="far fa-hospital icon"></i>
+                        <h4>Genetic Inheritance</h4>
+                        <p>Genetics can affect the risk of heart disease in a variety of ways.&nbsp;</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="page-footer dark">
+        <div class="footer-copyright">
+            <p>Copyright © 2019 Keshan He</p>
+        </div>
+    </footer>
+    <script src="{{ static_url('js/jquery.min.js') }}"></script>
+    <script src="{{ static_url('bootstrap/js/bootstrap.min.js') }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js"></script>
+    <script src="{{ static_url('js/script.min.js') }}"></script>
+</body>
+
+</html>
